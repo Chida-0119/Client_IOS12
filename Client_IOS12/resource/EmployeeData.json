@@ -1,0 +1,50 @@
+[
+    {
+        "name": "千田　伸一郎",
+        "category": "取締役",
+        "id": 0,
+        "address": "0x6b0eEa30d84F0B88e07d7c649e3D0cbe8D3F15c3",
+        "privateKey": "67d6b6fdb373ac2d054e369c0debd0aba03ab6ded4299f0c81ec2bcae5f67070",
+        "imageName": "000"
+    },
+    {
+        "name": "石川　達也",
+        "category": "金融システム開発第１部",
+        "id": 1,
+        "address": "0xbf5087EFf7aeAC0862260E813D82C4aAa1691976",
+        "privateKey": "d258e0c98922d04619787b6d310094ef36cf01554cc26142c08356229d4fb51f",
+        "imageName": "002"
+    },
+    {
+        "name": "武田　信弘",
+        "category": "金融システム開発第２部",
+        "id": 2,
+        "address": "0x354B7EF8cE61C05EEDcF382A153d9608E420aBd4",
+        "privateKey": "46735a73a95d96b68b1060a944d1d9c1d56ab9d9526515fb4458e91fa74de34d",
+        "imageName": "003"
+    },
+    {
+        "name": "今井　宏志",
+        "category": "取締役",
+        "id": 3,
+        "address": "0xd8DEC014fAfFcf1486cf156bAa03FcB42CBdEe22",
+        "privateKey": "312736e8130cfeb7459098400a4aeadf71ccde48a6d580ecf2902a55494bfbfa",
+        "imageName": "001"
+    },
+    {
+        "name": "坂本　尚",
+        "category": "取締役",
+        "id": 4,
+        "address": "0x6c07Cb46B97d37E61CE45D1EeD3F9C20D931B08E",
+        "privateKey": "679db176cfbd3094e78fae351e9dcccc1298ebfe57bf5bdf04df43fcfefb09b2",
+        "imageName": "004"
+    },
+   {
+        "name": "吉田 康人",
+        "category": "プロダクト部",
+        "id": 5,
+        "address": "0x418A0Dc7e27a511C3F2cC84bA176410d609a6FE1",
+        "privateKey": "3142bac74f763f84c58786d448c95e24cf3ec843493654102925a696bc1a5d10",
+        "imageName": "005"
+}
+]

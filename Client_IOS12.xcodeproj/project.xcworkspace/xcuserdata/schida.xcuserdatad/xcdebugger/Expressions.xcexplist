@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ManagedDirectory.viewDidLoad():ManagedDirectory.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewWillAppear(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "myProfile">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EmployeeDetail.init(coder:):EmployeeDetail.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ManagedEmployee.viewDidLoad():ManagedEmployee.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "employee">
+            </PersistentString>
+            <PersistentString
+               value = "employeeImage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EmployeeRow.hiddenGranted.didset:EmployeeRow.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pointLabelConstraint">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MyProfileSetting.viewWillDisappear(_:):MyProfileSetting.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "myProfilePicker.selectedRow(inComponent: 0)">
+            </PersistentString>
+            <PersistentString
+               value = "myProfile.index">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLoad():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "grantedPoint.text">
+            </PersistentString>
+            <PersistentString
+               value = "pointData">
+            </PersistentString>
+            <PersistentString
+               value = "employeeData[0]">
+            </PersistentString>
+            <PersistentString
+               value = "employeeData[0].image">
+            </PersistentString>
+            <PersistentString
+               value = "myProfile.me.address">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EmployeeDirectory.prepare(for:sender:):EmployeeDirectory.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView.indexPathForSelectedRow">
+            </PersistentString>
+            <PersistentString
+               value = "employeeDetailVC">
+            </PersistentString>
+            <PersistentString
+               value = "selectedEmployee">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
