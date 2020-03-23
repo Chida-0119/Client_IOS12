@@ -14,22 +14,35 @@ var employeeMaster: [Employee] = load("EmployeeData.json")
 //var me: Employee = employeeData[0]
 
 func load<T: Decodable>(_ filename: String) -> T {
-    let data: Data
+    let request = URL(string: "https://goodpoint-master-webapi.azurewebsites.net/users")!
+    let file:URL = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0] + filename)
+    var rawData = try? Data(contentsOf: file)
+    var serverData: Data?
+    let semaphore = DispatchSemaphore(value: 0)
     
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else {
-        fatalError("Couldn't find \(filename) in main bundle.")
+    URLSession.shared.dataTask(with: request) { (data, response, error) in
+        if error == nil {
+            // let session = URLSession(configuration: .default)
+            serverData = data
+        }
+        semaphore.signal()
+        return
+    }.resume()
+
+    semaphore.wait()
+    
+    if serverData != nil {
+        rawData = serverData
+        do {
+            try rawData!.write(to: file)
+        } catch {
+            fatalError("Couldn't flash \(filename) to local cache.")
+        }
     }
-    
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-    }
-    
+
     do {
         let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
+        return try decoder.decode(T.self, from: rawData!)
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }

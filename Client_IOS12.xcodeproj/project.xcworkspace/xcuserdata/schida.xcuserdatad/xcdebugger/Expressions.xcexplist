@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "load&lt;A&gt;(_:):Data.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "URL(string: MasterUrl)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ManagedDirectory.viewDidLoad():ManagedDirectory.swift">
          <PersistentStrings>
             <PersistentString
@@ -22,6 +30,14 @@
          contextName = "EmployeeDetail.init(coder:):EmployeeDetail.swift">
       </ContextState>
       <ContextState
+         contextName = "EmployeeRow.hiddenGranted.didset:EmployeeRow.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pointLabelConstraint">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ManagedEmployee.viewDidLoad():ManagedEmployee.swift">
          <PersistentStrings>
             <PersistentString
@@ -29,14 +45,6 @@
             </PersistentString>
             <PersistentString
                value = "employeeImage">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "EmployeeRow.hiddenGranted.didset:EmployeeRow.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "pointLabelConstraint">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -58,10 +66,10 @@
                value = "grantedPoint.text">
             </PersistentString>
             <PersistentString
-               value = "pointData">
+               value = "employeeData[0]">
             </PersistentString>
             <PersistentString
-               value = "employeeData[0]">
+               value = "pointData">
             </PersistentString>
             <PersistentString
                value = "employeeData[0].image">
@@ -78,10 +86,10 @@
                value = "tableView.indexPathForSelectedRow">
             </PersistentString>
             <PersistentString
-               value = "employeeDetailVC">
+               value = "selectedEmployee">
             </PersistentString>
             <PersistentString
-               value = "selectedEmployee">
+               value = "employeeDetailVC">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

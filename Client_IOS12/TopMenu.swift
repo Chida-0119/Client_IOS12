@@ -19,17 +19,6 @@ class TopMenu: UIViewController {
     }
 
     /*
-    @IBAction func tapManagedDirectory(_ sender: Any) {
-       let storyboard: UIStoryboard = self.storyboard!
-        let managedView = storyboard.instantiateViewController(withIdentifier: "ManagedDirectory")
-        let navi = UINavigationController(rootViewController: managedView)
-        //present(navi, animated: false, completion: nil)
-        navi.modalTransitionStyle = .coverVertical
-        present(navi, animated: true, completion: nil)
-        //self.navigationController?.pushViewController(managedView, animated: true)
-    }
- */
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
