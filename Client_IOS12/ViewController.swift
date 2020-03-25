@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var grantedPoint: UILabel!
     @IBOutlet weak var goodPoint: UILabel!
     
-    private var savedProfile:Int = -1
+    private var savedAddress:String = MyProfile.shared.address
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -29,18 +29,19 @@ class ViewController: UIViewController {
 //      self.setProfile(index: 0)
     }
 
+    /*
     func setProfile(index:Int){
-        myProfile.setProfile(index: index)
+        MyProfile.shared.setProfile(index: index)
     }
-
+*/
     override func viewWillAppear(_ animaated:Bool){
         super.viewWillAppear(animaated)
-        if self.savedProfile != myProfile.index {
-            self.profileDispName.text = myProfile.me.name as String
-            self.profileImage.image = myProfile.me.image as UIImage
-            self.grantedPoint.text = pointData.granted[myProfile.me.address]
-            self.goodPoint.text = pointData.given[myProfile.me.address]
-            self.savedProfile = myProfile.index
+        if self.savedAddress != MyProfile.shared.address {
+            self.profileDispName.text = MyProfile.shared.me.name as String
+            self.profileImage.image = MyProfile.shared.me.image as UIImage
+            self.grantedPoint.text = pointData.granted[MyProfile.shared.address]
+            self.goodPoint.text = pointData.given[MyProfile.shared.address]
+            self.savedAddress = MyProfile.shared.address
         }
     }
     

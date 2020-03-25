@@ -20,8 +20,8 @@ final class PointData {
     //var granted: [String:String] = ["0x6b0eEa30d84F0B88e07d7c649e3D0cbe8D3F15c3":"0"]
     static let zeroPoints : () -> [String:String] = {
         var _ret:[String : String] = [:]
-        for e in employeeMaster {
-                    _ret[e.address] = "0"
+        for (_ , data) in UserMaster.shared.users {
+                    _ret[data.address] = "0"
         }
         return _ret
     }
@@ -29,10 +29,10 @@ final class PointData {
     var given: [String:String] = zeroPoints()
         
     func refresh() -> Bool {
-        let ethAccess = EthAccess(con: connectConfig, prof: myProfile)
-        for e in employeeMaster {
-            self.given[e.address] = ethAccess.getBalance(address: e.address)!
-            self.granted[e.address] = ethAccess.getGranted(address: e.address)!
+        let ethAccess = EthAccess(con: connectConfig)
+        for (_ , data) in UserMaster.shared.users {
+            self.given[data.address] = ethAccess.getBalance(address: data.address)!
+            self.granted[data.address] = ethAccess.getGranted(address: data.address)!
         }
         freshness = Date()
         return true

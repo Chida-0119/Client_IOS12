@@ -10,6 +10,12 @@ import UIKit
 
 class MyProfileSetting:  UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
  
+    private struct _Employee {
+        var name: String
+        var address: String
+    }
+    private var _data: [_Employee] = []
+    
     //@IBOutlet weak var myProfilePicker: UIPickerView!
     @IBOutlet weak var myProfileUser: UITextField!
     let pickerView = UIPickerView()
@@ -39,26 +45,30 @@ class MyProfileSetting:  UIViewController,UIPickerViewDelegate,UIPickerViewDataS
         toolBar.isUserInteractionEnabled = true
         toolBar.sizeToFit()
         myProfileUser.inputAccessoryView = toolBar
-        //pickerView.selectRow(myProfile.index, inComponent: 0, animated: false)
+        
+        for (_, e) in UserMaster.shared.users {
+            _data.append(_Employee(name:e.name,address:e.address))
+        }
+
     }
     
     // Done
     @objc func donePressed() {
-        if myProfile.index != pickerView.selectedRow(inComponent: 0) {
-            myProfile.setProfile(index: pickerView.selectedRow(inComponent: 0) )
-            myProfileUser.text = employeeMaster[pickerView.selectedRow(inComponent: 0)].name
+        let _address = _data[pickerView.selectedRow(inComponent: 0)].address
+        if MyProfile.shared.address != _address {
+            MyProfile.shared.setProfile(address: _address)
+            myProfileUser.text = _data[pickerView.selectedRow(inComponent: 0)].name
         }
         view.endEditing(true)
     }
 
     // Cancel
     @objc func cancelPressed() {
-        // myProfileUser.text = employeeMaster[pickerView.selectedRow(inComponent: 0)].name
         view.endEditing(true)
     }
 
    override func viewWillAppear(_ animated: Bool) {
-        myProfileUser.text = myProfile.me.name
+        myProfileUser.text = _data[pickerView.selectedRow(inComponent: 0)].name
     }
  
     //ひとつのPickerViewに対して、横にいくつドラムロールを並べるかを指定。通常は1でOK
@@ -68,12 +78,12 @@ class MyProfileSetting:  UIViewController,UIPickerViewDelegate,UIPickerViewDataS
  
 //PickerViewの選択肢の個数を返す処理。複数のpickerViewがある場合は、tagをStoryboard上で設定して場合分けをする
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return employeeMaster.count
+        return _data.count
     }
     
 //PickerViewの選択肢として表示する文字列を設定（これがないと、?として表示されてしまう）
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-        return employeeMaster[row].name
+        return _data[row].name
     }
 
 /*

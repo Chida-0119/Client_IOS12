@@ -10,7 +10,7 @@ import CoreLocation
 import UIKit
 import SwiftUI
 
-var employeeMaster: [Employee] = load("EmployeeData.json")
+// var employeeMaster: [Employee] = load("Users.json")
 //var me: Employee = employeeData[0]
 
 func load<T: Decodable>(_ filename: String) -> T {

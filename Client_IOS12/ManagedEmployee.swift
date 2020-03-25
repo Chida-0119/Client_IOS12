@@ -10,7 +10,7 @@ import UIKit
 
 class ManagedEmployee: UIViewController {
 
-    var employee: Employee = employeeMaster[0]
+    var employee: Employee = UserMaster.shared.users[MyProfile.shared.me.address]!
     @IBOutlet weak var employeeImage: UIImageView!
     @IBOutlet weak var employeeDispName: UILabel!
     @IBOutlet weak var grantedPoint: UILabel!
@@ -40,7 +40,7 @@ class ManagedEmployee: UIViewController {
     }
     */
     @IBAction func execAddGranted(_ sender: Any) {
-        let ethAccess = EthAccess(con: connectConfig, prof: myProfile)
+        let ethAccess = EthAccess(con: connectConfig)
         
         ethAccess.addGood(toAddress: employee.address, value: addGrantedAmount.text!)
         if pointData.refresh() {}

@@ -12,7 +12,7 @@ import UIKit
 class EmployeeDirectory: UITableViewController  {
     var selectedEmployee: Employee = employeeData[0]
     private var freshness = Date()
-    private var currentProfile:Int = 0
+    private var currentAddress:String = MyProfile.shared.address
     
 
     @IBAction func refreshTableView(_ sender: Any) {
@@ -30,8 +30,8 @@ class EmployeeDirectory: UITableViewController  {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if currentProfile != myProfile.index || freshness.compare(pointData.freshness) == .orderedAscending {
-            currentProfile = myProfile.index
+        if currentAddress != MyProfile.shared.address || freshness.compare(pointData.freshness) == .orderedAscending {
+            currentAddress = MyProfile.shared.address
             tableView.reloadData()
         }
     }
@@ -41,7 +41,7 @@ class EmployeeDirectory: UITableViewController  {
 
         tableView.register(UINib(nibName: "EmployeeRow", bundle: nil), forCellReuseIdentifier: "EmployeeRow")
         freshness = pointData.freshness
-        currentProfile = myProfile.index
+        currentAddress = MyProfile.shared.address
     }
 
     override func didReceiveMemoryWarning() {

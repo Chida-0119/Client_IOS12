@@ -9,15 +9,34 @@
 import UIKit
 
 class TopMenu: UIViewController {
-
+    @IBOutlet weak var ManagedMenuButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        myProfile.setProfile(index: 0)
+        // myProfile.setProfile(index: 0)
+        if UserMaster.shared.getFromWeb() {
+           UserMaster.shared.getFromCache()
+        }
+        MyProfile.shared.load()
+        if MyProfile.shared.address == "" {
+            performSegue(withIdentifier: "viewWillLayoutSubviews", sender: nil)
+        }
+
         if pointData.refresh() { }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        let ethAccess = EthAccess(con: connectConfig)
+        if !ethAccess.isMinter(address: MyProfile.shared.address)! {
+            ManagedMenuButton.isEnabled = false
+            ManagedMenuButton.isHidden = true
+        } else {
+            ManagedMenuButton.isEnabled = true
+            ManagedMenuButton.isHidden = false
+        }
+    }
     /*
     // MARK: - Navigation
 

@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1A72222429ACA90063817C /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1A72212429ACA90063817C /* CacheStore.swift */; };
+		7A1A72262429F15D0063817C /* UserMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1A72252429F15D0063817C /* UserMaster.swift */; };
 		7A51CF8524210C1000075FBA /* UserMainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51CF8424210C1000075FBA /* UserMainTab.swift */; };
 		7A582BBD2420AB1100D79CFF /* TopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A582BBC2420AB1100D79CFF /* TopMenu.swift */; };
 		7A582BBF2420ABDA00D79CFF /* effI_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A582BBE2420ABDA00D79CFF /* effI_logo.png */; };
 		7A582BC12420B55B00D79CFF /* ManagedDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A582BC02420B55B00D79CFF /* ManagedDirectory.swift */; };
 		7A582BC32420BBEC00D79CFF /* ManagedEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A582BC22420BBEC00D79CFF /* ManagedEmployee.swift */; };
+		7A6C4B552428870A008A82E0 /* ContractABI.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A6C4B542428870A008A82E0 /* ContractABI.txt */; };
 		7AC36C81241F1824002638E3 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC36C80241F1824002638E3 /* coin.png */; };
 		7AC36C84241F1A2A002638E3 /* profile48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC36C82241F1A2A002638E3 /* profile48.png */; };
 		7AC36C85241F1A2A002638E3 /* coin48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC36C83241F1A2A002638E3 /* coin48.png */; };
@@ -67,11 +70,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1A72212429ACA90063817C /* CacheStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStore.swift; sourceTree = "<group>"; };
+		7A1A72252429F15D0063817C /* UserMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMaster.swift; sourceTree = "<group>"; };
 		7A51CF8424210C1000075FBA /* UserMainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMainTab.swift; sourceTree = "<group>"; };
 		7A582BBC2420AB1100D79CFF /* TopMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenu.swift; sourceTree = "<group>"; };
 		7A582BBE2420ABDA00D79CFF /* effI_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = effI_logo.png; sourceTree = "<group>"; };
 		7A582BC02420B55B00D79CFF /* ManagedDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedDirectory.swift; sourceTree = "<group>"; };
 		7A582BC22420BBEC00D79CFF /* ManagedEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedEmployee.swift; sourceTree = "<group>"; };
+		7A6C4B542428870A008A82E0 /* ContractABI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ContractABI.txt; sourceTree = "<group>"; };
 		7AC36C80241F1824002638E3 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
 		7AC36C82241F1A2A002638E3 /* profile48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile48.png; sourceTree = "<group>"; };
 		7AC36C83241F1A2A002638E3 /* coin48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin48.png; sourceTree = "<group>"; };
@@ -152,6 +158,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A1A72202429AC940063817C /* util */ = {
+			isa = PBXGroup;
+			children = (
+				7A1A72212429ACA90063817C /* CacheStore.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		7AD0684B241B13F8008DA6DC = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +190,7 @@
 		7AD06856241B13F8008DA6DC /* Client_IOS12 */ = {
 			isa = PBXGroup;
 			children = (
+				7A1A72202429AC940063817C /* util */,
 				7AD068B3241B4A8F008DA6DC /* EthAccess.swift */,
 				7AD068AF241B42F4008DA6DC /* EmployeeDirectory.swift */,
 				7AC36C86241F3C2B002638E3 /* EmployeeDetail.swift */,
@@ -230,6 +245,7 @@
 				7AD06890241B187A008DA6DC /* 004.jpg */,
 				7AD06891241B187A008DA6DC /* 005.jpg */,
 				7AD06892241B187A008DA6DC /* EmployeeData.json */,
+				7A6C4B542428870A008A82E0 /* ContractABI.txt */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -237,6 +253,7 @@
 		7AD068A4241B189B008DA6DC /* model */ = {
 			isa = PBXGroup;
 			children = (
+				7A1A72252429F15D0063817C /* UserMaster.swift */,
 				7AD068CA241B518B008DA6DC /* ConnectConfig.swift */,
 				7AD068CB241B518B008DA6DC /* MyProfile.swift */,
 				7AD068B1241B49DB008DA6DC /* PointData.swift */,
@@ -384,6 +401,7 @@
 				7AD0689A241B187A008DA6DC /* 002.jpg in Resources */,
 				7AD068AE241B41E0008DA6DC /* EmployeeRow.xib in Resources */,
 				7AC36C85241F1A2A002638E3 /* coin48.png in Resources */,
+				7A6C4B552428870A008A82E0 /* ContractABI.txt in Resources */,
 				7AD0689F241B187A008DA6DC /* 005.jpg in Resources */,
 				7AD06864241B13FA008DA6DC /* LaunchScreen.storyboard in Resources */,
 				7AD06861241B13FA008DA6DC /* Assets.xcassets in Resources */,
@@ -451,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD068B0241B42F4008DA6DC /* EmployeeDirectory.swift in Sources */,
+				7A1A72262429F15D0063817C /* UserMaster.swift in Sources */,
 				7AD068CD241B518B008DA6DC /* MyProfile.swift in Sources */,
 				7AD0685C241B13F8008DA6DC /* ViewController.swift in Sources */,
 				7AC36C89241F99B4002638E3 /* MyProfileSetting.swift in Sources */,
@@ -464,6 +483,7 @@
 				7A582BC12420B55B00D79CFF /* ManagedDirectory.swift in Sources */,
 				7AD068B2241B49DB008DA6DC /* PointData.swift in Sources */,
 				7AD068B4241B4A8F008DA6DC /* EthAccess.swift in Sources */,
+				7A1A72222429ACA90063817C /* CacheStore.swift in Sources */,
 				7A582BC32420BBEC00D79CFF /* ManagedEmployee.swift in Sources */,
 				7AC36C87241F3C2B002638E3 /* EmployeeDetail.swift in Sources */,
 				7AD0685A241B13F8008DA6DC /* SceneDelegate.swift in Sources */,

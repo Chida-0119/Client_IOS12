@@ -35,7 +35,7 @@ class EmployeeDetail: UIViewController {
     }
 
     @IBAction func tapSend(_ sender: Any) {
-        let ethAccess = EthAccess(con: connectConfig, prof: myProfile)
+        let ethAccess = EthAccess(con: connectConfig)
         
         ethAccess.sendGood(toAddress: employee.address, value: goodPointAmount.text!)
         if pointData.refresh() {}
@@ -51,11 +51,11 @@ class EmployeeDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        myGrantedPoint.text = "付与ポイント:\(String(pointData.granted[myProfile.me.address]!))"
+        myGrantedPoint.text = "付与ポイント:\(String(pointData.granted[MyProfile.shared.address]!))"
         empGoodPoint.text = "いいね！:\(String(pointData.given[employee.address]!))"
         goodPointAmount.text = "1"
-        myProfileImage.image = myProfile.me.image
-        myProfileDispName.text = myProfile.me.name
+        myProfileImage.image = MyProfile.shared.me.image
+        myProfileDispName.text = MyProfile.shared.me.name
         employeeImage.image = employee.image
         employeeDispName.text = employee.name
             

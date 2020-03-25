@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="【プロト版のみ】ユーザー選択メニュー"/>
                                 <connections>
-                                    <segue destination="1eY-oy-tpv" kind="show" id="0Nz-Y9-iDy"/>
+                                    <segue destination="1eY-oy-tpv" kind="show" identifier="toProfileSetting" id="0Nz-Y9-iDy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,6 +45,9 @@
                         <viewLayoutGuide key="safeArea" id="0iI-vX-COi"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Jd-aG-ban"/>
+                    <connections>
+                        <outlet property="ManagedMenuButton" destination="HKv-sH-DFz" id="4Th-6j-kwm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axw-Mp-jDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
