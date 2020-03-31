@@ -16,7 +16,7 @@ class EmployeeRow: UITableViewCell {
     @IBOutlet weak var employeeImage: UIImageView!
     @IBOutlet weak var grantedPointLabel: UILabel!
     @IBOutlet weak var goodPointLabel: UILabel!
-        
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,10 +29,15 @@ class EmployeeRow: UITableViewCell {
     }
     
     func setCell(employee:Employee, grantedPoint:String, goodPoint:String) {
-        self.employeeImage.image = employee.image
         self.displayName.text = employee.name as String
         self.grantedPoint.text = grantedPoint as String
         self.goodPoint.text = goodPoint as String
+
+        self.employeeImage.image = employee.image
+        //self.employeeImage.frame = CGRect(x: 50, y: 150, width: 300, height: 300)
+        self.employeeImage.layer.cornerRadius = self.employeeImage.frame.width * 0.5
+        self.employeeImage.clipsToBounds = true
+
     }
 
     var hiddenGranted :Bool = true {

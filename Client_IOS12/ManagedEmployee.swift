@@ -10,7 +10,7 @@ import UIKit
 
 class ManagedEmployee: UIViewController {
 
-    var employee: Employee = UserMaster.shared.users[MyProfile.shared.me.address]!
+    var employee: Employee = UserMaster.shared.users[MyProfile.shared.address!]!
     @IBOutlet weak var employeeImage: UIImageView!
     @IBOutlet weak var employeeDispName: UILabel!
     @IBOutlet weak var grantedPoint: UILabel!

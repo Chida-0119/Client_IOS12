@@ -14,11 +14,12 @@ class ManagedDirectory: UITableViewController {
         var name : String
         var address: String
     }
-    private var selectedEmployee: Employee = MyProfile.shared.me
+    private var selectedEmployee: Employee = MyProfile.shared.me!
     private var _data:[_Employee] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if pointData.refresh() { }
         // Do any additional setup after loading the view.
         tableView.register(UINib(nibName: "EmployeeRow", bundle: nil), forCellReuseIdentifier: "EmployeeRow")
 

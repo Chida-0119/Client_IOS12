@@ -51,11 +51,11 @@ class EmployeeDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        myGrantedPoint.text = "付与ポイント:\(String(pointData.granted[MyProfile.shared.address]!))"
+        myGrantedPoint.text = "付与ポイント:\(String(pointData.granted[MyProfile.shared.address!]!))"
         empGoodPoint.text = "いいね！:\(String(pointData.given[employee.address]!))"
         goodPointAmount.text = "1"
-        myProfileImage.image = MyProfile.shared.me.image
-        myProfileDispName.text = MyProfile.shared.me.name
+        myProfileImage.image = MyProfile.shared.me!.image
+        myProfileDispName.text = MyProfile.shared.me!.name
         employeeImage.image = employee.image
         employeeDispName.text = employee.name
             

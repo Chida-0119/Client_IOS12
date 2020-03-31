@@ -14,6 +14,9 @@
 		7A582BBF2420ABDA00D79CFF /* effI_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A582BBE2420ABDA00D79CFF /* effI_logo.png */; };
 		7A582BC12420B55B00D79CFF /* ManagedDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A582BC02420B55B00D79CFF /* ManagedDirectory.swift */; };
 		7A582BC32420BBEC00D79CFF /* ManagedEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A582BC22420BBEC00D79CFF /* ManagedEmployee.swift */; };
+		7A5A2E79242C345D00B08FAE /* InitialSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5A2E78242C345D00B08FAE /* InitialSettings.storyboard */; };
+		7A5A2E7B242CAC0300B08FAE /* TopScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5A2E7A242CAC0300B08FAE /* TopScreenVC.swift */; };
+		7A5A2E7D242CC63300B08FAE /* UserMainListCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5A2E7C242CC63300B08FAE /* UserMainListCellVC.swift */; };
 		7A6C4B552428870A008A82E0 /* ContractABI.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A6C4B542428870A008A82E0 /* ContractABI.txt */; };
 		7AC36C81241F1824002638E3 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC36C80241F1824002638E3 /* coin.png */; };
 		7AC36C84241F1A2A002638E3 /* profile48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC36C82241F1A2A002638E3 /* profile48.png */; };
@@ -21,7 +24,6 @@
 		7AC36C87241F3C2B002638E3 /* EmployeeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC36C86241F3C2B002638E3 /* EmployeeDetail.swift */; };
 		7AC36C89241F99B4002638E3 /* MyProfileSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC36C88241F99B4002638E3 /* MyProfileSetting.swift */; };
 		7AD06858241B13F8008DA6DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06857241B13F8008DA6DC /* AppDelegate.swift */; };
-		7AD0685A241B13F8008DA6DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06859241B13F8008DA6DC /* SceneDelegate.swift */; };
 		7AD0685C241B13F8008DA6DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0685B241B13F8008DA6DC /* ViewController.swift */; };
 		7AD0685F241B13F8008DA6DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD0685D241B13F8008DA6DC /* Main.storyboard */; };
 		7AD06861241B13FA008DA6DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD06860241B13FA008DA6DC /* Assets.xcassets */; };
@@ -77,6 +79,9 @@
 		7A582BBE2420ABDA00D79CFF /* effI_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = effI_logo.png; sourceTree = "<group>"; };
 		7A582BC02420B55B00D79CFF /* ManagedDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedDirectory.swift; sourceTree = "<group>"; };
 		7A582BC22420BBEC00D79CFF /* ManagedEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedEmployee.swift; sourceTree = "<group>"; };
+		7A5A2E78242C345D00B08FAE /* InitialSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialSettings.storyboard; sourceTree = "<group>"; };
+		7A5A2E7A242CAC0300B08FAE /* TopScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopScreenVC.swift; sourceTree = "<group>"; };
+		7A5A2E7C242CC63300B08FAE /* UserMainListCellVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMainListCellVC.swift; sourceTree = "<group>"; };
 		7A6C4B542428870A008A82E0 /* ContractABI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ContractABI.txt; sourceTree = "<group>"; };
 		7AC36C80241F1824002638E3 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
 		7AC36C82241F1A2A002638E3 /* profile48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile48.png; sourceTree = "<group>"; };
@@ -85,7 +90,6 @@
 		7AC36C88241F99B4002638E3 /* MyProfileSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileSetting.swift; sourceTree = "<group>"; };
 		7AD06854241B13F8008DA6DC /* Client_IOS12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client_IOS12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD06857241B13F8008DA6DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7AD06859241B13F8008DA6DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7AD0685B241B13F8008DA6DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7AD0685E241B13F8008DA6DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AD06860241B13FA008DA6DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 		7AD06856241B13F8008DA6DC /* Client_IOS12 */ = {
 			isa = PBXGroup;
 			children = (
+				7A5A2E7C242CC63300B08FAE /* UserMainListCellVC.swift */,
+				7A5A2E7A242CAC0300B08FAE /* TopScreenVC.swift */,
 				7A1A72202429AC940063817C /* util */,
 				7AD068B3241B4A8F008DA6DC /* EthAccess.swift */,
 				7AD068AF241B42F4008DA6DC /* EmployeeDirectory.swift */,
@@ -198,9 +204,9 @@
 				7AD068A4241B189B008DA6DC /* model */,
 				7AD0688B241B187A008DA6DC /* resource */,
 				7AD06857241B13F8008DA6DC /* AppDelegate.swift */,
-				7AD06859241B13F8008DA6DC /* SceneDelegate.swift */,
 				7AD0685B241B13F8008DA6DC /* ViewController.swift */,
 				7AD0685D241B13F8008DA6DC /* Main.storyboard */,
+				7A5A2E78242C345D00B08FAE /* InitialSettings.storyboard */,
 				7AD06860241B13FA008DA6DC /* Assets.xcassets */,
 				7AD06862241B13FA008DA6DC /* LaunchScreen.storyboard */,
 				7AD06865241B13FA008DA6DC /* Info.plist */,
@@ -407,6 +413,7 @@
 				7AD06861241B13FA008DA6DC /* Assets.xcassets in Resources */,
 				7AD0689E241B187A008DA6DC /* 004.jpg in Resources */,
 				7AC36C84241F1A2A002638E3 /* profile48.png in Resources */,
+				7A5A2E79242C345D00B08FAE /* InitialSettings.storyboard in Resources */,
 				7AC36C81241F1824002638E3 /* coin.png in Resources */,
 				7AD0689D241B187A008DA6DC /* 000.jpg in Resources */,
 				7A582BBF2420ABDA00D79CFF /* effI_logo.png in Resources */,
@@ -472,6 +479,7 @@
 				7A1A72262429F15D0063817C /* UserMaster.swift in Sources */,
 				7AD068CD241B518B008DA6DC /* MyProfile.swift in Sources */,
 				7AD0685C241B13F8008DA6DC /* ViewController.swift in Sources */,
+				7A5A2E7D242CC63300B08FAE /* UserMainListCellVC.swift in Sources */,
 				7AC36C89241F99B4002638E3 /* MyProfileSetting.swift in Sources */,
 				7AD068CC241B518B008DA6DC /* ConnectConfig.swift in Sources */,
 				7AD068A9241B18EA008DA6DC /* Data.swift in Sources */,
@@ -482,11 +490,11 @@
 				7A582BBD2420AB1100D79CFF /* TopMenu.swift in Sources */,
 				7A582BC12420B55B00D79CFF /* ManagedDirectory.swift in Sources */,
 				7AD068B2241B49DB008DA6DC /* PointData.swift in Sources */,
+				7A5A2E7B242CAC0300B08FAE /* TopScreenVC.swift in Sources */,
 				7AD068B4241B4A8F008DA6DC /* EthAccess.swift in Sources */,
 				7A1A72222429ACA90063817C /* CacheStore.swift in Sources */,
 				7A582BC32420BBEC00D79CFF /* ManagedEmployee.swift in Sources */,
 				7AC36C87241F3C2B002638E3 /* EmployeeDetail.swift in Sources */,
-				7AD0685A241B13F8008DA6DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,7 +669,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = DWVVAABU66;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -688,7 +696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = DWVVAABU66;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

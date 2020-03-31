@@ -11,6 +11,7 @@ import UIKit
 class MyProfileSetting:  UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
  
     private struct _Employee {
+        var id: Int
         var name: String
         var address: String
     }
@@ -47,19 +48,30 @@ class MyProfileSetting:  UIViewController,UIPickerViewDelegate,UIPickerViewDataS
         myProfileUser.inputAccessoryView = toolBar
         
         for (_, e) in UserMaster.shared.users {
-            _data.append(_Employee(name:e.name,address:e.address))
+            _data.append(_Employee(id:e.id,name:e.name,address:e.address))
         }
-
+        _data.sort(by: {(first, second) -> Bool in first.id < second.id} )
     }
     
     // Done
     @objc func donePressed() {
         let _address = _data[pickerView.selectedRow(inComponent: 0)].address
-        if MyProfile.shared.address != _address {
+        myProfileUser.text = _data[pickerView.selectedRow(inComponent: 0)].name
+        if myProfileUser.text != "" {
             MyProfile.shared.setProfile(address: _address)
             myProfileUser.text = _data[pickerView.selectedRow(inComponent: 0)].name
+            view.endEditing(true)
+            
+            //Storyboardを指定
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //Viewcontrollerを指定
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "UserMain")
+            self.dismiss(animated: false)
+            UIApplication.shared.keyWindow?.rootViewController = initialViewController
+        //表示
+            UIApplication.shared.keyWindow?.makeKeyAndVisible()
+//        performSegue(withIdentifier: "toUserMain", sender: nil)
         }
-        view.endEditing(true)
     }
 
     // Cancel
@@ -68,7 +80,7 @@ class MyProfileSetting:  UIViewController,UIPickerViewDelegate,UIPickerViewDataS
     }
 
    override func viewWillAppear(_ animated: Bool) {
-        myProfileUser.text = _data[pickerView.selectedRow(inComponent: 0)].name
+        //myProfileUser.text = _data[pickerView.selectedRow(inComponent: 0)].name
     }
  
     //ひとつのPickerViewに対して、横にいくつドラムロールを並べるかを指定。通常は1でOK

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OZ8-KG-YMq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Profile Setting-->
+        <scene sceneID="shV-Yb-OBp">
+            <objects>
+                <viewController storyboardIdentifier="myProfileSetting" modalPresentationStyle="fullScreen" id="OZ8-KG-YMq" customClass="MyProfileSetting" customModule="Client_IOS12" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="663-VF-nZk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!!!本来は、ここで自分のWallet 作成や名前などの個人情報をここで設定します!!!!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHk-a0-dg5">
+                                <rect key="frame" x="23" y="96" width="370" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="dpt-YQ-z7j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定ユーザー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-Ry-wr1">
+                                <rect key="frame" x="69" y="203" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abF-Vz-KeP">
+                                <rect key="frame" x="188" y="194" width="206" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="abF-Vz-KeP" firstAttribute="trailing" secondItem="663-VF-nZk" secondAttribute="trailingMargin" id="4EA-Dd-IFv"/>
+                            <constraint firstItem="mHk-a0-dg5" firstAttribute="top" secondItem="WLy-F2-IJY" secondAttribute="top" constant="52" id="HJB-A6-m3Z"/>
+                            <constraint firstItem="Gel-Ry-wr1" firstAttribute="leading" secondItem="WLy-F2-IJY" secondAttribute="leading" constant="69" id="KrF-0K-zGx"/>
+                            <constraint firstItem="abF-Vz-KeP" firstAttribute="top" secondItem="mHk-a0-dg5" secondAttribute="bottom" constant="15" id="Pcc-HM-iMl"/>
+                            <constraint firstItem="Gel-Ry-wr1" firstAttribute="top" secondItem="mHk-a0-dg5" secondAttribute="bottom" constant="24" id="Ro3-xv-tCV"/>
+                            <constraint firstItem="mHk-a0-dg5" firstAttribute="leading" secondItem="WLy-F2-IJY" secondAttribute="leading" constant="23" id="SN5-v4-4f2"/>
+                            <constraint firstItem="abF-Vz-KeP" firstAttribute="leading" secondItem="Gel-Ry-wr1" secondAttribute="trailing" constant="15" id="UpI-ol-Rfc"/>
+                            <constraint firstItem="WLy-F2-IJY" firstAttribute="trailing" secondItem="mHk-a0-dg5" secondAttribute="trailing" constant="21" id="ycp-4g-St3"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
+                        <viewLayoutGuide key="safeArea" id="WLy-F2-IJY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Psr-Xe-0M9"/>
+                    <connections>
+                        <outlet property="MyProfileUser" destination="abF-Vz-KeP" id="OFe-PQ-DBG"/>
+                        <segue destination="6h3-hJ-9rh" kind="show" identifier="toUserMain" id="Zjg-yT-Y5Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Prw-2A-nIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1939.1304347826087" y="-518.30357142857144"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="zX2-Ao-LV2">
+            <objects>
+                <viewControllerPlaceholder id="6h3-hJ-9rh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="S50-8D-OSM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nav-7Y-maH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1117" y="-645"/>
+        </scene>
+    </scenes>
+</document>

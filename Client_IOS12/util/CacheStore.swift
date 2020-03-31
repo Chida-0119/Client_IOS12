@@ -18,10 +18,11 @@ enum CacheStoreError: Error {
 class CacheStore {
     static let shared = CacheStore()
     private init() {}
+    private let saveDir = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)[0]
     
     
     func save<T:Codable>(data:T, to:String) throws {
-        let file:URL = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0] + to)
+        let file:URL = URL(fileURLWithPath: saveDir + to)
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
 
@@ -35,10 +36,10 @@ class CacheStore {
     }
     
     func read<T:Codable>(from:String) throws -> T {
-        let file:URL = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0] + from)
+        let file:URL = URL(fileURLWithPath: saveDir + from)
         let decoder: JSONDecoder = JSONDecoder()
-        let raw = try! Data(contentsOf: file)
         do {
+            let raw = try! Data(contentsOf: file)
             return try decoder.decode(T.self, from: raw)
         } catch {
             print("Unable to load or decode wallet key !" )
@@ -48,6 +49,7 @@ class CacheStore {
     }
     
     func exists(fileName:String)->Bool {
-        return FileManager.default.fileExists(atPath: fileName)
+        let file:URL = URL(fileURLWithPath: saveDir + fileName)
+        return FileManager.default.fileExists(atPath: file.path)
     }
 }

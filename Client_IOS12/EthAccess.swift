@@ -67,8 +67,8 @@ struct EthAccess {
     }
     
     init(con:ConnectConfig) {
-        self.privatekey = MyProfile.shared.privateKey
-        self.address = MyProfile.shared.address
+        self.privatekey = MyProfile.shared.privateKey!
+        self.address = MyProfile.shared.address!
         self.endpoint = con.destination.endpoint
         self._tokenAddress = con.destination.tokenAddress
         let formattedKey = privatekey.trimmingCharacters(in: .whitespacesAndNewlines)

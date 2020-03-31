@@ -19,6 +19,7 @@ class UserMainTab: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if pointData.refresh() { }
     }
     
 
