@@ -9,10 +9,21 @@
 import UIKit
 
 class UserMainTab: UITabBarController {
+    
+    var ActivityIndicator: UIActivityIndicatorView!
 
     @IBAction func tapRefresh(_ sender: Any) {
-        if pointData.refresh() {}
-        self.selectedViewController?.viewWillAppear(false)
+
+        ActivityIndicator.startAnimating()
+        
+        DispatchQueue.global(qos: .default).async {
+            if pointData.refresh() {}
+            
+            DispatchQueue.main.async {
+                self.selectedViewController?.viewWillAppear(false)
+                self.ActivityIndicator.stopAnimating()
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -20,6 +31,16 @@ class UserMainTab: UITabBarController {
 
         // Do any additional setup after loading the view.
         if pointData.refresh() { }
+        ActivityIndicator = UIActivityIndicatorView()
+        ActivityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        ActivityIndicator.center = self.view.center
+        // クルクルをストップした時に非表示する
+        ActivityIndicator.hidesWhenStopped = true
+        // 色を設定
+        ActivityIndicator.style = UIActivityIndicatorView.Style.gray
+
+        view.addSubview(ActivityIndicator)
+
     }
     
 

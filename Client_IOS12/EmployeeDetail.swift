@@ -12,6 +12,8 @@ class EmployeeDetail: UIViewController {
     //var myProfile: MyProfile = myProfile
     var employee: Employee  = employeeData[0]
     //var pointData: PointData = PointData()
+    var ActivityIndicator: UIActivityIndicatorView!
+    //var activityIndicatorView = UIActivityIndicatorView()
 
     @IBOutlet weak var myProfileImage: UIImageView!
     @IBOutlet weak var employeeImage: UIImageView!
@@ -35,12 +37,23 @@ class EmployeeDetail: UIViewController {
     }
 
     @IBAction func tapSend(_ sender: Any) {
-        let ethAccess = EthAccess(con: connectConfig)
         
-        ethAccess.sendGood(toAddress: employee.address, value: goodPointAmount.text!)
-        if pointData.refresh() {}
-        //self.dismiss(animated: true, completion: nil)
-        self.navigationController?.popViewController(animated: true)
+        let amount = self.goodPointAmount.text!
+        ActivityIndicator.startAnimating()
+        
+        
+        DispatchQueue.global(qos: .default).async {
+            let ethAccess = EthAccess(con: connectConfig)
+
+            ethAccess.sendGood(toAddress: self.employee.address, value: amount)
+            if pointData.refresh() {}
+            //self.dismiss(animated: true, completion: nil)
+            DispatchQueue.main.async {
+                self.ActivityIndicator.stopAnimating()
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+
     }
     
     @IBAction func changeStepper(_ sender: UIStepper) {
@@ -63,7 +76,16 @@ class EmployeeDetail: UIViewController {
         myProfileImage.layer.cornerRadius = myProfileImage.bounds.width / 2
         employeeImage.layer.masksToBounds = true
         employeeImage.layer.cornerRadius = employeeImage.bounds.width / 2
+        
+        ActivityIndicator = UIActivityIndicatorView()
+        ActivityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        ActivityIndicator.center = self.view.center
+        // クルクルをストップした時に非表示する
+        ActivityIndicator.hidesWhenStopped = true
+        // 色を設定
+        ActivityIndicator.style = UIActivityIndicatorView.Style.gray
 
+        view.addSubview(ActivityIndicator)
 
         // Do any additional setup after loading the view.
     }
